@@ -63,21 +63,27 @@ Here is an example of a traffic sign image before and after grayscaling.
 > pixel = (pixel - 128) / 128
 
 
-#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2. Model
 
-My final model consisted of the following layers:
+The model consists of the following transforms and layers:
 
-| Layer         		|     Description	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Layer         		|      Description	        					| Output shape
+|:---------------------:|:---------------------------------------------:|:---------------------------------------------:|
+| Input         		| 32x32x3 RGB image   							| `32 x 32 x 3`
+| `rgb2grayscale` | Convert the image to grayscale. Reduce 3 channels to 1. | `32 x 32 x 1`|
+| `normalize_pixel_v` | Normalize the pixel values to have a zero mean and equal variance | `32 x 32 x 1` |
+| Convolution `5 x 5 x 1`    	| `1 x 1` stride, `valid` padding	| `28 x 28 x 6` |
+| RELU					|				Activation 								| `28 x 28 x 6` |
+| Max pooling	 `2 x 2 x 1`      	|  `2 x 2` stride,  `valid` padding | `14 x 14 x 6` 				|
+| Convolution `5 x 5	x 6`    |  `1 x 1` stride, `valid` padding  									| `10 x 10 x 16` |
+| RELU					|				Activation 								| `10 x 10 x 16` |
+| Max pooling	 `2 x 2 x 1`      	|  `2 x 2` stride,  `valid` padding | `5 x 5 x 16` 				|
+| Flatten | &nbsp; | `1 x 400` |
+| Fully connected		| 120 neurons in hidden layer      									|  `1 x 120` |
+| RELU					|				Activation 								| `1 x 120` |
+| Fully connected		| 84 neurons in hidden layer     									|  `1 x 84` |
+| RELU					|				Activation 								| `1 x 84` |
+| Fully connected		| 43 neurons in output layer. One for each of the traffic signs.    									|  `1 x 43` |
  
 
 
