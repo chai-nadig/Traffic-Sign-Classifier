@@ -153,6 +153,7 @@ The code for making predictions on my final model is located in the 16th cell of
 | 0.0001				    | **Road work**      							|
 
 **Bumpy Road**
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.799        			| **Priority Road**  									| 
@@ -162,6 +163,7 @@ The code for making predictions on my final model is located in the 16th cell of
 | 0.0000000004				    | **Traffic Signals**      							|
 
 **Speed limit (30km/h)**
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 0.999        			| **Speed limit (30km/h)**  									| 
@@ -171,6 +173,7 @@ The code for making predictions on my final model is located in the 16th cell of
 | 0.000000000001					    | **Speed limit (80km/h)**      							|
 
 **Roundabout Mandatory**
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0        			| **Priority road**  									| 
@@ -181,6 +184,7 @@ The code for making predictions on my final model is located in the 16th cell of
 
 
 **Road work**
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.0        			| **Road work**  									| 
