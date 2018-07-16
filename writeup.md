@@ -19,6 +19,7 @@ The goals / steps of this project are the following:
 [image6]: ./speed30.jpg "Traffic Sign 3"
 [image7]: ./roundaboutmandatory.jpg "Traffic Sign 4"
 [image8]: ./roadwork.jpg "Traffic Sign 5"
+[image9]: ./resized.png "Resized traffic sizes"
 
 ## Rubric
 ### The rubric for this project is [here](https://review.udacity.com/#!/rubrics/481/view).
@@ -108,47 +109,48 @@ My final model results were:
 #### 1. Random German traffic signs found on the web 
 | Image | Description |
 |:-----:|:-----------:|
-|![alt text][image4] | &nbsp; |
-|![alt text][image5] | &nbsp; |
-|![alt text][image6] | &nbsp; |
-|![alt text][image7] | &nbsp; |
-|![alt text][image8] | &nbsp; |
+|![alt text][image4] | * No Passing * No background noise.   |
+|![alt text][image5] | * Bumpy Road * Some background noise behind the sign. |
+|![alt text][image6] | * Speed limit (30km/h) * Significant background noise. |
+|![alt text][image7] | * Roundabout Mandatory * Some background noise behind the sign. |
+|![alt text][image8] | * Road work * Lot of background noise in the image due to presence of a tree. |
 
-The first image might be difficult to classify because ...
+These images were resized to `32 x 32 x 3` dimensions. After resizing they look like this:
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+![alt text][image9]
+
+* **No Passing** sign can be wrongly classified as **End of no passing**
+* **Speed limit (30km/h)** can be wrongly classified as **Speed limit (50km/h)**
+
+
+#### 2. Prediction Results
 
 Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| **No Passing**      		| **No Passing**   									| 
+| **Bumpy Road**     			| **Priority Road** 										|
+| **Speed limit (30km/h)**					| **Speed limit (30km/h)**											|
+| **Roundabout Mandatory**	      		| **Priority road**					 				|
+| **Road work**			| **Road work**     							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. 
 
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Model Certainty
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 16th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+**No Passing**
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| 0.884        			| **No Passing**  									| 
+| 0.085     				| **Children Crossing**										|
+| 0.022					| **Dangerous curve to the right**											|
+| 0.003	      			| **Slippery road**					 				|
+| 0.0001				    | **Road work**      							|
 
 
 For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
-
