@@ -152,5 +152,39 @@ The code for making predictions on my final model is located in the 16th cell of
 | 0.003	      			| **Slippery road**					 				|
 | 0.0001				    | **Road work**      							|
 
+**Bumpy Road**
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.799        			| **Priority Road**  									| 
+| 0.198     				| **No Vehicles**										|
+| 0.001					| **Stop**											|
+| 0.0000005	      			| **Speed limit (80km/h)**					 				|
+| 0.0000000004				    | **Traffic Signals**      							|
 
-For the second image ... 
+**Speed limit (30km/h)**
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 0.999        			| **Speed limit (30km/h)**  									| 
+| 0.000005     				| **Speed limit (50km/h)**										|
+| 0.0000000001					| **Speed limit (60km/h)**											|
+| 0.00000000001	      			| **Speed limit (20km/h)**					 				|
+| 0.000000000001					    | **Speed limit (80km/h)**      							|
+
+**Roundabout Mandatory**
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0        			| **Priority road**  									| 
+| 2.0635305e-08     				| **Traffic signals**										|
+| 2.0033411e-08					| **Roundabout mandatory**											|
+| 1.9728803e-08	      			| **No vehicles**					 				|
+| 5.0829407e-09					    | **Children crossing**      							|
+
+
+**Road work**
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.0        			| **Road work**  									| 
+| 4.9934885e-16     				| **Bicycles crossing**										|
+| 2.1883280e-16					| **Keep right**											|
+| 3.1257852e-17	      			| **Bumpy road**					 				|
+| 4.4315817e-18					    | **Dangerous curve to the left**      							|
