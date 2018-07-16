@@ -1,11 +1,5 @@
 # **Traffic Sign Recognition** 
 
-## Writeup
-
----
-
-**Build a Traffic Sign Recognition Project**
-
 The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
@@ -32,26 +26,25 @@ The goals / steps of this project are the following:
 ---
 ### Files submitted
 
-1. `Traffic_Sign_Classifier.ipynb`
-2. `Traffic_Sign_Classifier.html`
-3. `writeup.md`
+1. [`Traffic_Sign_Classifier.ipynb`](Traffic_Sign_Classifier.ipynb)
+2. [`Traffic_Sign_Classifier.html`](Traffic_Sign_Classifier.html)
+3. [`writeup.md`](writeup.md)
 
 ### Data Set Summary & Exploration
 
-#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Summary
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+The dataset was explored using `numpy`.
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is **34799**
+* The size of the validation set is **4410**
+* The size of test set is **12630**
+* The shape of a traffic sign image is **(32, 32, 3)**
+* The number of unique classes/labels in the data set is **43**
 
-#### 2. Include an exploratory visualization of the dataset.
+#### 2. Label distribution.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here're are bar charts that plot the distribution of examples vs labels in the train, validate and test datasets.
 
 ![alt text][image1]
 
