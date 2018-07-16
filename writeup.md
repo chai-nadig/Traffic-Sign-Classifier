@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [image5]: ./bumpyroad.jpg "Traffic Sign 2"
 [image6]: ./speed30.jpg "Traffic Sign 3"
 [image7]: ./roundaboutmandatory.jpg "Traffic Sign 4"
-[image8]: ./roadworkd.jpg "Traffic Sign 5"
+[image8]: ./roadwork.jpg "Traffic Sign 5"
 
 ## Rubric
 ### The rubric for this project is [here](https://review.udacity.com/#!/rubrics/481/view).
@@ -44,31 +44,23 @@ The dataset was explored using `numpy`.
 
 #### 2. Label distribution.
 
-Here're are bar charts that plot the distribution of examples vs labels in the train, validate and test datasets.
+Here are bar charts that plot the distribution of examples vs labels in the train, validate and test datasets.
 
 ![alt text][image1]
 
 ### Design and Test a Model Architecture
 
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
-
-As a first step, I decided to convert the images to grayscale because ...
+#### Preprocessing
+1. Images are converted to grayscale using `rgb2grayscale` function. 
+Images are grayscaled as the color in the signs does not matter as much as the shapes in the signs. 
 
 Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
 
-As a last step, I normalized the image data because ...
+2. The pixels in the image were normalized to have a mean of zero and equal variance using this formula. NNs perform better on datasets which have zero mean and equal variance.
 
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
+> pixel = (pixel - 128) / 128
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
