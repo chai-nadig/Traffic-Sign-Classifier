@@ -92,8 +92,8 @@ The model consists of the following transforms and layers:
 
 | Hyperparamters | value |
 |:--------------:|:-----:|
-| Batch Size     | 256 |
-| Epochs         | 15  |
+| Batch Size     | 128 |
+| Epochs         | 45  |
 | Learning rate  | 0.001 |
 
 `AdamOptimizer` was used to optimize the model.
@@ -101,8 +101,8 @@ The model consists of the following transforms and layers:
 #### 4. Final Results
 
 My final model results were:
-* validation set accuracy of 0.894 
-* test set accuracy of 0.886
+* validation set accuracy of **0.941**
+* test set accuracy of **0.916**
 
 ### Test a Model on New Images
 
@@ -130,7 +130,7 @@ Here are the results of the prediction:
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | **No Passing**      		| **No Passing**   									| 
-| **Bumpy Road**     			| **Priority Road** 										|
+| **Bumpy Road**     			| **Road work** 										|
 | **Speed limit (30km/h)**					| **Speed limit (30km/h)**											|
 | **Roundabout Mandatory**	      		| **Priority road**					 				|
 | **Road work**			| **Road work**     							|
@@ -146,49 +146,49 @@ The code for making predictions on my final model is located in the 16th cell of
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 0.884        			| **No Passing**  									| 
-| 0.085     				| **Children Crossing**										|
-| 0.022					| **Dangerous curve to the right**											|
-| 0.003	      			| **Slippery road**					 				|
-| 0.0001				    | **Road work**      							|
+| 0.886        			| **No Passing**  									| 
+| 0.060     				| **Roundabout mandatory**										|
+| 0.026					| **End of no passing**											|
+| 0.026	      			| **Vehicles over 3.5 metric tons prohibited**					 				|
+| 0.000001				    | **Right-of-way at the next intersection**      							|
 
 **Bumpy Road**
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 0.799        			| **Priority Road**  									| 
-| 0.198     				| **No Vehicles**										|
-| 0.001					| **Stop**											|
-| 0.0000005	      			| **Speed limit (80km/h)**					 				|
-| 0.0000000004				    | **Traffic Signals**      							|
+| 0.999        			| **Road work**  									| 
+| 3.60831564e-07     				| **Bicycles crossing**										|
+| 1.72929518e-11					| **Road narrows on the right**											|
+| 5.81553374e-14	      			| **Speed limit (80km/h)**					 				|
+| 4.31980450e-16				    | **Double curve**      							|
 
 **Speed limit (30km/h)**
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 0.999        			| **Speed limit (30km/h)**  									| 
-| 0.000005     				| **Speed limit (50km/h)**										|
-| 0.0000000001					| **Speed limit (60km/h)**											|
-| 0.00000000001	      			| **Speed limit (20km/h)**					 				|
-| 0.000000000001					    | **Speed limit (80km/h)**      							|
+| 9.99999881e-01        			| **Speed limit (30km/h)**  									| 
+| 1.23033558e-07     				| **Speed limit (20km/h)**										|
+| 2.47407927e-15					| **Speed limit (70km/h)**											|
+| 3.86806653e-18	      			| **Speed limit (50km/h)**					 				|
+| 3.64326159e-18					    | **Roundabout mandatory**      							|
 
 **Roundabout Mandatory**
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 1.0        			| **Priority road**  									| 
-| 2.0635305e-08     				| **Traffic signals**										|
-| 2.0033411e-08					| **Roundabout mandatory**											|
-| 1.9728803e-08	      			| **No vehicles**					 				|
-| 5.0829407e-09					    | **Children crossing**      							|
+| 1.00000000e+00        			| **Priority road**  									| 
+| 9.76907000e-10     				| **Roundabout mandatory**										|
+| 3.07066317e-10					| **Right-of-way at the next intersection**											|
+| 2.45481710e-15	      			| **No passing**					 				|
+| 1.69802054e-18					    | **End of no passing**      							|
 
 
 **Road work**
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 1.0        			| **Road work**  									| 
-| 4.9934885e-16     				| **Bicycles crossing**										|
-| 2.1883280e-16					| **Keep right**											|
-| 3.1257852e-17	      			| **Bumpy road**					 				|
-| 4.4315817e-18					    | **Dangerous curve to the left**      							|
+| 9.79318619e-01        			| **Road work**  									| 
+| 2.06811670e-02     				| **Dangerous curve to the right**										|
+| 1.89160417e-07					| **Right-of-way at the next intersection**											|
+| 1.68937392e-10	      			| **Road narrows on the right**					 				|
+| 3.29088666e-11					    | **Slippery Road**      							|
